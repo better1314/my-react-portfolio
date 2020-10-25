@@ -3,12 +3,11 @@ import '../App.css';
 
 function Header(){
     return(
-        <div class="header">
-        <a href="#default" class="logo">My Portfolio</a>
-        <div class="header-right">
-            <a class="active" href="#home">Home</a>
+        <div className="header">
+        <a href="#default" className="logo">Gan Zhi Kiat</a>
+        <div className="header-right">
             <a href="#contact">Contact Me</a>
-            <a href="#about">About Me</a>
+            <a className="active" href="#about">About Me</a>
         </div>
         </div>
     );

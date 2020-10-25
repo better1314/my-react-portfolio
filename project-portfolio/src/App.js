@@ -2,10 +2,15 @@ import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import Header from './Templete/header';
+import Footer from './Templete/footer';
 
 function App() {
   return (
-    <Header/>
+    <div>
+      <Header />
+
+      <Footer />
+    </div>
   );
 }
 
