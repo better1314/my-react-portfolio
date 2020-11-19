@@ -3,39 +3,39 @@ import '../App.css';
 
 function Contact(){
     return(
-        <section class="contact" id="contact">
-            <div class="max-width">
-                <h2 class="title">Contact Me</h2>
-                <div class="contact-content">
-                        <div class="text">Get in Touch</div>
+        <section className="contact" id="contact">
+            <div className="max-width">
+                <h2 className="title">Contact Me</h2>
+                <div className="contact-content">
+                        <div className="text">Get in Touch</div>
                         <p>Want to know more about me? drop me an email or whatsapp~</p>
-                        <div class="icons">
-                            <div class="row">
-                                <i class="fas fa-user"></i>
-                                <div class="info">
-                                    <div class="head">Name</div>
-                                    <div class="sub-title">Gan Zhi Kiat</div>
+                        <div className="icons">
+                            <div className="row">
+                                <i className="fas fa-user"></i>
+                                <div className="info">
+                                    <div className="head">Name</div>
+                                    <div className="sub-title">Gan Zhi Kiat</div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <i class="fa fa-phone"></i>
-                                <div class="info">
-                                    <div class="head">Phone</div>
-                                    <div class="sub-title">012-9338220</div>
+                            <div className="row">
+                                <i className="fa fa-phone"></i>
+                                <div className="info">
+                                    <div className="head">Phone</div>
+                                    <div className="sub-title">012-9338220</div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <i class="fas fa-envelope"></i>
-                                <div class="info">
-                                    <div class="head">Email</div>
-                                    <div class="sub-title">zhikiatgan@hotmail.com</div>
+                            <div className="row">
+                                <i className="fas fa-envelope"></i>
+                                <div className="info">
+                                    <div className="head">Email</div>
+                                    <div className="sub-title">zhikiatgan@hotmail.com</div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="info">
-                                    <div class="head">Address</div>
-                                    <div class="sub-title">Tangkak, Johor Malaysia.</div>
+                            <div className="row">
+                                <i className="fas fa-map-marker-alt"></i>
+                                <div className="info">
+                                    <div className="head">Address</div>
+                                    <div className="sub-title">Tangkak, Johor Malaysia.</div>
                                 </div>
                             </div>
                         </div>

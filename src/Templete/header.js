@@ -7,7 +7,12 @@ function Header(){
         <div className="header">
         <a href="#default" className="logo">My Portfolio.</a>
         <div className="header-right">
-            <a className="active" href={myresume} target="_blank" rel="noopener noreferrer" download><i className="fas fa-download"/>Download CV</a>
+            <a className="active" href={myresume} target="_blank" rel="noopener noreferrer" download><i className="fas fa-download"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Download CV</a>
         </div>
         </div>
     );

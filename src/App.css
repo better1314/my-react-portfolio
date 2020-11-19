@@ -6,7 +6,7 @@ body{
 
 .header {
   overflow: hidden;
-  background-color: black;
+  background-color: rgba(0, 0, 0, .2);
   padding: 10px 10px;
 }
 
@@ -18,7 +18,6 @@ body{
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  border-radius: 25px;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
@@ -33,40 +32,103 @@ body{
   animation-fill-mode: forwards;
 }
 
-/* Change the background color on mouse-over */
-.header-right a:hover {
-  border: 1px solid lightskyblue;
-}
-
-/* Style the active/current link*/
-.header a.active {
-  background-color: lightskyblue;
-  color: black;
-}
-
-/* Float the link section to the right */
 .header-right {
   float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header-right a {
   margin-right: 25px;
   padding-left: 35px;
   padding-right: 35px;
   justify-content: left;
+  position: relative;
+  display: inline-block;
+  color: lightskyblue;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.header-right a:hover{
+  color: rgb(15, 33, 59);
+  background: lightskyblue;
+  box-shadow: 0 0 10px lightskyblue, 0 0 40px lightskyblue,
+  0 0 80px lightskyblue;
+  transition-delay: 1s;
+}
+.header-right a span{
+  position: absolute;
+  display: block;
+}
+.header-right a span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,lightskyblue);
+}
+.header-right a:hover span:nth-child(1){
+
+  left: 100%;
+  transition: 1s;
+}
+.header-right a span:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,lightskyblue);
+}
+.header-right a:hover span:nth-child(3){
+
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.header-right a span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,lightskyblue);
+}
+.header-right a:hover span:nth-child(2){
+
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.header-right a span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,lightskyblue);
+}
+.header-right a:hover span:nth-child(4){
+
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
 }
 
 .header-right i{
   margin-right: 10px;
 }
 
-/* Banner CSS */
-.home{
-  display: flex;
-  background: url(./Asset/1043667024.jpg) no-repeat center;
+.bgImg{
+  background: url(./Asset/banner.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   height:100vh;
+}
+
+/* Banner CSS */
+.home{
+  display: flex;
   color: white;
+  height:100vh;
 }
 
 .home .max-width{
@@ -79,7 +141,7 @@ body{
 
 .home .home-content .text-2{
   font-size: 75px;
-  font-weight: 600;
+  font-weight: 600; 
   margin-left: -3px;
 }
 
@@ -465,6 +527,14 @@ body{
     float: none;
   }
 
+  .home .home-content .text-2 {
+    font-size: 65px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 35px;
+  }
+
   footer {
     padding: 5px;
     font-size: 0.7em;
@@ -491,6 +561,48 @@ footer {
 
 footer span{
   color: lightskyblue;
+}
+
+/* Loader CSS */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+}
+.loader {
+  top: 50vh;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
 }
 
 @keyframes titleMovement {
